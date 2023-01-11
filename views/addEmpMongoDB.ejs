@@ -1,0 +1,30 @@
+<body>
+    <h1>Add Employee</h1>
+    
+    <ul>
+        <li>Employee ID must be 4 Characters.</li>
+        <li>Phone number must be over 5 digits.</li>
+        <li>Email must be Valid.</li>
+    </ul>
+
+    
+    <form action="/employeesMongoDB/add" method="POST">
+        
+        <label>Employee ID:</label>
+        <input type="text" name="_id" minlength="4" maxlength="4" required>
+        
+        
+        <label>Phone Number:</label>
+        <input type="number" name="phone" min="9999" required>
+        
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <button onclick="window.location.href='http://localhost:3000/';">Home</button>
+    <br>
+    <button onclick="window.location.href='http://localhost:3000/empMongoDB';">List of Employees (MongoDB)</button>
+</body>

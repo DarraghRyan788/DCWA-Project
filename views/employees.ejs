@@ -1,0 +1,36 @@
+<h1>Employees</h1>
+
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+    }
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>EID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Salary</th>
+        <th>Update</th>
+    </tr>
+
+    <% employeeData.forEach((employeeData)=>{ %>
+        <tr>
+            <td><%=employeeData.eid %></td>
+            <td><%=employeeData.ename %></td>
+            <td><%=employeeData.role %></td>
+            <td><%=employeeData.salary %></td>
+            
+            <td><a href="http://localhost:3000/employees/edit/<%=employeeData.eid%>">Update</a></td>
+        </tr><% }) %>
+</table>
+
+<br>
+<button onclick="window.location.href='http://localhost:3000/';">Home</button>
